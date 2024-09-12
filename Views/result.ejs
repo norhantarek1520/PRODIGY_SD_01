@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Temperature Conversion Results</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-image: url('https://mdbcdn.b-cdn.net/img/Photos/new-templates/search-box/img4.webp');
+      background-size: cover;
+      background-position: center;
+      height: 100vh;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .card {
+      width: 400px;
+      border-radius: 15px;
+      background-color: rgba(255, 255, 255, 0.8);
+      backdrop-filter: blur(4px);
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .card-body {
+      padding: 30px;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    button {
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    .converted-value {
+      font-weight: bold;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      padding: 10px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+  </style>
+
+</head>
+
+<body>
+  <div class="container">
+    <div class="card">
+      <div class="card-body">
+        <h1>Conversion Results</h1>
+        <p class="converted-value">Celsius: <%= convertedValues.celsius %>
+        </p>
+        <p class="converted-value">Fahrenheit: <%= convertedValues.fahrenheit %>
+        </p>
+        <p class="converted-value">Kelvin: <%= convertedValues.kelvin %>
+        </p>
+
+        <button id="refreshButton"><a href="/">Go Back</a></button>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

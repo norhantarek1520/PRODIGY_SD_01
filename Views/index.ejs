@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Temperature Converter</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-image: url('https://mdbcdn.b-cdn.net/img/Photos/new-templates/search-box/img4.webp');
+      background-size: cover;
+      background-position: center;
+      height: 100vh;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .card {
+      width: 400px;
+      border-radius: 15px;
+      background-color: rgba(255, 255, 255, 0.8);
+      backdrop-filter: blur(4px);
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .card-body {
+      padding: 30px;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    label {
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    input[type="number"],
+    select {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+    }
+
+    button {
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    #results {
+      margin-top: 20px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="card">
+      <div class="card-body">
+        <h1>Temperature Converter</h1>
+        <form action="/" method="post">
+          <label for="temperature">Temperature:</label>
+          <input type="number" id="temperature" name="temperatureValue" required>
+          <label for="unit">Unit:</label>
+          <select id="unit" name="temperatureUnit">
+            <option value="celsius">Celsius</option>
+            <option value="fahrenheit">Fahrenheit</option>
+            <option value="kelvin">Kelvin</option>
+          </select>
+          <button type="submit">Convert</button>
+        </form>
+        <div id="results"></div>  
+        <button id="refreshButton">Refresh</button>
+      </div>
+
+    </div>
+  </div>
+  </div>
+  <script>
+    const temperatureInput = document.getElementById('temperature');
+    const unitSelect = document.getElementById('unit');
+    const refreshButton = document.getElementById('refreshButton');
+
+    refreshButton.addEventListener('click', function () {
+      temperatureInput.value = '';
+      unitSelect.value = 'celsius';
+
+    });
+
+  </script>
+</body>
+
+</html>
